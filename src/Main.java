@@ -1,12 +1,14 @@
-//This is a sample program to solve the linear equations.
+import java.util.Locale;
 import java.util.Scanner;
 public class Main
 {
     public static void main(String[] args)
     {
-        Scanner scan = new Scanner(System.in);
-        LinearSystem system = new LinearSystem();
+        Scanner scan = new Scanner(System.in).useLocale(Locale.US);
+        LinearSystem sys = new LinearSystem();
 
-        system.createSystem();
+        sys.create();
+        sys.solve();
+        sys.result();
     }
 }
